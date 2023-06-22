@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+    
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ html{
+    font-size: 62.5%;
+
+}
+body{
+    margin: 0;
+    font-family: 'Poppins ';
+
+}
+ .wrapper{
+    max-width: 1461px;
+    margin: 0 auto;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    margin: 4.1rem;
+}
+nav ul{
+ list-style-type: none;
+ display: flex;
+ gap: 4.1em;
+ margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+}
+nav ul li a.active::before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+nav ul li a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(92, 92, 92);
+    bottom: -6px;
+    transition: width   .3s;
+
+}
+
+.container{
+ margin: 0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 80px;
+}
+.heading{
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.underline{
+    width:100px;
+    height: 5px;
+    background-color: rgb(149, 87, 87);
+    margin: auto;
+
+}
+.box{
+    width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid: 5px;
+    margin: a auto;
+}
+.card{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: #ffff;
+    margin: 0 auto;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0,.2);
+
+}
+.card:before,.card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:4px;
+    background-color: rgb(204, 106, 106);
+    transition: 0.5s;
+    z-index: -1;
+
+
+
+}
+.card .imgBx{
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: #222;
+    transition: 0.5s;
+    z-index: 1;
+
+}
+.card .imgBx img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover::before{
+    transform: rotate(20deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+
+.card:hover:after{
+    transform: rotate(10deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+.card:hover.imgBx{
+    bottom: 80px;
+}
+.card .details{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height:60px ;
+    text-align: center;
+}
+.card .details h2{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #060606;
+    text-transform:uppercase;
+
+}
+
+.footer{
+    background-color: #0f0e0e;
+
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: o.9;
+
+}
+.socialIcons a:hover{
+background-color: #3b3030;
+transition: 0.5s;
+}
+
+.footerNav{
+    margin: 40px 0;
+
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.footerNav ul li a{
+    color: rgb(36, 26, 26);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+
+} 
+.footerBottom p{
+    color: white;
+   
+}
+
+    </style>
+    
+    <div class="wrapper">
+        <header>
+        
+            <a href=""><img src="logo.jpg" alt="nalka logo"></a>
+        
+        <nav>
+            <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="./product.html">Product</a></li>
+        <li><a href="./Gallery.html">Gallery</a></li>
+        <li><a href="./Contact.html">Contact</a></li>
+        
+            </ul>
+        
+        
+        </nav>
+        
+        
+        
+        </header>
+
+
+
+
+
+
+
+
+
+    
+<h1 class="heading">Welcome To Our Gallery</h1>
+<div class="underline"></div>
+
+<div class="container"> 
+    <div class="box">
+        <div class="card">
+            <div class="imgBx">
+                <img src="1.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>somalia</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="3.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="G4.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="G2.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="TIRIK5.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="TIRIK8.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="TIRIK7.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="TIRIK6.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="DHEXTAL1.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="3.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="TIRIK4.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="TIRIK3.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="TIRIK2.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="TIRIK1.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>dirac</span></h2>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="4.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>somalia</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="1.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>somalia</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="DHEXTAL2.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>soma</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="G1.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>somalia</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="G2.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>somalia</span></h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="G3.jpg" alt="img">
+            </div>
+            <div class="details">
+                <h2>dirac <br><span>somalia</span></h2>
+            </div>
+        </div>
+
+    </div>
+
+    
+   
+
+ 
+</div>
+
+<footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+
+            <a href="https://en-gb.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>   
+            
+        </div>
+        <div class="footerNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+        </div>
+    </div>
+    <div class="footerBottom">
+    <p>Copyright &copy;2023 Desined by <span class="designer">Awil</span></p>
+</div>
+</footer>
+
+    
+</body>
+</html>

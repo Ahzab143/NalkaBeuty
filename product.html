@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <style>
+html{
+    font-size: 65.5%;
+
+}
+.wrapper{
+    max-width: 1461px;
+    margin: 0 auto;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    margin: 4.1rem;
+}
+nav ul{
+ list-style-type: none;
+ display: flex;
+ gap: 4.1em;
+ margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+}
+nav ul li a.active::before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+nav ul li a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(92, 92, 92);
+    bottom: -6px;
+    transition: width   .3s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+        }
+        .underline{
+            width: 150px;
+            height: 5px;
+            background-color: black;
+        }
+
+        .card-img-top {
+            width: 100%!important;
+            height: 320px!important;
+            
+        }
+        .card{
+            margin-bottom: 20px;
+            box-shadow:rgb(100,100,111,0.2) 0px 7px 29px 0px ;
+        }
+        .btn-primary{
+            background-color:#dc3545!important;
+            color: white!important;
+            border: none!important;
+            border-radius: 0!important;
+
+        }
+
+        .footer{
+    background-color: #0f0e0e;
+
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: o.9;
+
+}
+.socialIcons a:hover{
+background-color: #3b3030;
+transition: 0.5s;
+}
+
+.footerNav{
+    margin: 30px 0;
+
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.footerNav ul li a{
+    color: rgb(36, 26, 26);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+
+} 
+.footerBottom p{
+    color: white;
+   
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight:400 ;
+    margin: 0px 5px ;
+}   
+
+@media(max-width:700px){
+    .footerNav ul{
+        flex-direction: column;
+
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+
+    </style>
+
+<div class="wrapper">
+    <header>
+    
+        <a href=""><img src="logo.jpg" alt="nalka logo"></a>
+    
+    <nav>
+        <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="./product.html">Product</a></li>
+    <li><a href="./Gallery.html">Gallery</a></li>
+    <li><a href="./Contact.html">Contact</a></li>
+    
+        </ul>
+    
+    
+    </nav>
+    
+    
+    
+    </header>
+
+    <div class="container"> 
+   <div class="row">
+    <div class="col text-center mt-4" >
+        <h1>All Product</h1>
+        <div class="underline mx-auto"></div>
+
+    </div>
+   </div>
+<div class="row mt-5">
+<div class=" filter-button-group d-flex justify-content-center">
+    <button type="button" class="btn btn-primary mx-2 btn-sm" data-filter="*">DHAMAN</button>
+    <button type="button" class="btn btn-primary mx-2 btn-sm" data-filter=".JEANS">ABAYAHA</button>
+    <button type="button" class="btn btn-primary mx-2 btn-sm" data-filter=".KHAMAR">DIRAC</button>
+    <button type="button" class="btn btn-primary mx-2 btn-sm" data-filter=".DIRAC">KHAMAAR</button>
+
+</div>
+
+</div>
+
+    </div>
+
+
+    <div class="container mt-4">
+   <div class="row mt-4" id="#list">
+<div class="col-md-3" jeans>
+    <div class="card">
+
+        <img src="./img/1.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">JALBAB BLACK 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£87</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="./img/2.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">SOM 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£90</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="./A.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">ABAYA 2023 </h5>
+                <p class="m-auto badge bg-danger">Price : <STRong>£110</STRong></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="B.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">ABAYA 2022</h5>
+                <p class="m-auto badge bg-danger">Price:£90</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="C.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">ISKUSIDAYS 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£70</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="D.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">WHITE ABAYA 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£110</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3  jeans">
+    <div class="card">
+
+        <img src="E.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">ABAYAH TUR 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£90</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="F.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">TURKEY 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£90</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="G.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">SOM ABAYAHA 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£69.99</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="H.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">ABYO</h5>
+                <p class="m-auto badge bg-danger">Price:£120</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="I.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">GAROWE 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£79.99</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="./img/4.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">MUQDISHO 2021</h5>
+                <p class="m-auto badge bg-danger">Price:£79.99</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="L.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">BOSAASO</h5>
+                <p class="m-auto badge bg-danger">Price:£90</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="O.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">BAYDHABO</h5>
+                <p class="m-auto badge bg-danger">Price:£80</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="S.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">NALKA 2023</h5>
+                <p class="m-auto badge bg-danger">Price:£170</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 jeans" >
+    <div class="card">
+
+        <img src="LOOSH.jpg" class="card-img-top img-fluid" >
+        <div class="card-body">
+            <div class="d-flex">
+                <h5 class="card-title">NALKA 2023 A</h5>
+                <p class="m-auto badge bg-danger">Price:£120</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+   </div>
+
+    </div>
+    <!--CDN lin Jquary-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--bootstrap5 and js links-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <!--istope plugin-->
+   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+
+<script>
+// init Isotope
+var $grid = $('#list').isotope({
+  // options
+});
+// filter items on button click
+$('.filter-button-group').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
+
+</script>
+
+
+<footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+
+            <a href="https://en-gb.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>    
+            
+        </div>
+        <div class="footerNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+      </ul>
+        </div>
+    </div>
+    <div class="footerBottom">
+    <p>Copyright &copy;2023 Desined by <span class="designer">Awil</span></p>
+</div>
+</footer>
+</body>
+</html>

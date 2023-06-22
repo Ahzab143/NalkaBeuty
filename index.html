@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <style>
+html{
+    font-size: 62.5%;
+
+}
+body{
+    margin: 0;
+    font-family: 'Poppins ';
+
+}
+.wrapper{
+    max-width: 1228px;
+    margin: 0 auto;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    margin: 4.1rem;
+}
+nav ul{
+ list-style-type: none;
+ display: flex;
+ gap: 4.1em;
+ margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+}
+nav ul li a.active::before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+nav ul li a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(92, 92, 92);
+    bottom: -6px;
+    transition: width   .3s;
+
+}
+main{
+    display: flex;
+    gap: 8em;
+    margin-top: 11em;
+
+}
+.left-col{
+    width: 45%;
+
+
+}
+.right-col{
+    flex-grow: 1;
+}
+h1{
+    font-size: 5.2rem;
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    margin: 0;
+}
+.subhead{
+    font-size: 1.8rem;
+}
+.cta-btns{
+    margin: 5em 0;
+}
+.cta-btns,.secondary-cta {
+    display:flex;
+    gap:2em;
+}
+.primary-cta{
+    background-color: #f1e2d1;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+}
+.secondary-cta{
+    font-size: 1.8em;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 1em 0;
+    
+
+}
+
+.secondary-cta svg{
+    width: 20px;
+    transition: transform .3s;
+
+}
+.news{
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid black;
+    border-radius: .8em;
+    position: relative;
+}
+p.employees{
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 200;
+
+}
+p.Details{
+    font-size: 1.4rem;
+    margin: 0;
+}
+/*Right column gallery*/
+.right-col{
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns:repeat(2,auto) ;
+    grid-template-areas: 
+    "left right"
+    "left bottom";
+
+}
+.card  {
+    border-radius: .8em;
+    padding: 1.1em;
+    display: flex;
+    align-items: end;
+    background-size: 150%;
+    transition:background-size 800ms;
+}
+.card1{
+grid-area: left;
+background-image: url(clothing1.jpg);
+
+}
+.card2{
+    background-image: url(card2.jpg);
+}
+.card3{
+    background-image: url(card3.jpg);
+    display: flex;
+  
+}
+.card-details{
+    background: white;
+    border-radius: .6em;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 800ms;
+}
+.card-details a{
+color: black;
+text-decoration: none;
+font-size: 1.6rem;
+font-weight:bold;
+}
+
+.card-details p{
+    font-size: 1.4rem;
+    margin: 0  ;
+}
+p.product-price{
+    font-size: 1.8em;
+    
+}
+
+/*microintersections*/
+nav ul li a:hover::before{
+    width: 35%;
+
+}
+.primary-cta:hover{
+    background: #E2D1BD;
+
+}
+
+.secondary-cta:hover svg{
+    transform: translate(10px);
+}
+
+.secondary-cta:hover{
+    text-decoration: underline;
+}
+
+.card:hover{
+    background-size: 160%;
+
+}
+
+.card:hover .card-details{
+    transform: translateY(-20px);
+}
+
+/*intro animation*/
+
+.overlay{
+    position: absolute;
+    z-index: 999;
+    background:white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes reveal{
+    from{
+
+    transform: scaleY(1);
+}
+to{
+
+    transform: scaleY(0);
+}
+main{
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.4);
+}
+
+
+
+}
+
+
+.footer{
+    background-color: #0f0e0e;
+
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: o.9;
+
+}
+.socialIcons a:hover{
+background-color: #3b3030;
+transition: 0.5s;
+}
+
+.footerNav{
+    margin: 30px 0;
+
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.footerNav ul li a{
+    color: rgb(36, 26, 26);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+
+} 
+.footerBottom p{
+    color: white;
+   
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight:400 ;
+    margin: 0px 5px ;
+}   
+
+@media(max-width:700px){
+    .footerNav ul{
+        flex-direction: column;
+
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+
+
+*body{
+    margin: o;
+    font-family: sans-serif;
+    background: #f2f2f2;
+}
+h3{
+    text-align: center;
+    font-size: 30PX;
+    margin: 0;
+    padding-top: 10PX;
+
+}
+a{
+    text-decoration: none;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.content{
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float:left;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgb(0, 0, 0,0.25), 0 10px  rgb(0, 0, 0,0.22);
+    transition: .4s;
+    background: #f2f2f2;
+}
+.content:hover{
+    box-shadow: o 3px 6px rgb(0, 0,0,0.16),
+    0 3px 6px rgb(0, 0, 0,0.23);
+    transform: translate(0px , -8px);
+}
+.img{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.p{
+    text-align: center;
+    color: #b2bec3;
+    padding-top: 0 8px;
+
+}
+
+h6{
+    font-size: 26px;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+li{
+    padding-top: 5px;
+}
+
+.fa{
+    font-size: 26px;
+    transition: .4s;
+    margin: 3px;
+}
+
+.checked{
+    color: #ff9f43;
+}
+
+.fa:hover{
+    transform: scale(1.3);
+    transition: .6s;
+}   
+
+
+
+
+
+ form{
+    background: rgba(27,31,34,0.80);
+    width: 640px;
+    margin: 50px auto;
+    max-width: 97%;
+    border-radius: 4px;
+    padding: 55px 30px;
+  }
+  
+  form .title h2{
+    letter-spacing: 6px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+  }
+  
+  form .half{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  form .half .item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 48%;
+  }
+  
+  form label{
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+  
+  form .half .item input{
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 16px;
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    font-size: 17px;
+  }
+  
+  form .full{
+    margin-bottom: 24px;
+  }
+  
+  form .full textarea{
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 12px 16px;
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+  }
+  
+  form .action{
+    margin-bottom: 32px;
+  }
+  
+  form .action input{
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+    margin-right: 10px;
+  }
+  
+  form .action input[type="submit"]{
+    background: white;
+    color: black;
+  }
+  
+  form .icons a{
+    border: 1px solid white;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 600;
+    width: 38px;
+    margin-right: 10px;
+  }
+  
+  form .half .item input:focus, form .full textarea:focus, form .action input[type="reset"]:hover, form .icons a:hover{
+    background: rgba(255,255,255,0.075);
+  }
+  
+  @media (max-width: 480px){
+    form .half{
+      flex-direction: column;
+    }
+    form .half .item{
+      width: 100%;
+    }
+    form .action{
+      display: flex;
+      flex-direction: column;
+    }
+    form .action input{
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+
+
+
+
+
+
+    </style>
+
+    <div class="overlay"></div>
+
+    <div class="wrapper">
+<header>
+
+    <a href=""><img src="logo.jpg" alt="nalka logo"></a>
+
+<nav>
+    <ul>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="product.html">Product</a></li>
+<li><a href="./Gallery.html">Gallery</a></li>
+<li><a href="./Contact.html">Contact</a></li>
+
+    </ul>
+
+
+</nav>
+
+
+
+</header>
+
+<main>
+    <div class="left-col">
+
+        <h1>Hi, Welcome to Nalka Online Shopping ! glad to have you here </h1>
+        <p class="subhead">Dhamaan hablahayga waxan idinkuso dhawaynayaa gacmo furan, <br> dalabkaga oo sida ugu fudud aad ku helaysid !</p>
+
+   <div class="cta-btns">
+    <a href="Gallery.html" class="primary-cta">Browse Our Collection</a>
+    <a href="product.html" class="secondary-cta">
+        <span>Spring '23 Collection</span>H
+        <svg  viewBox="0 0 34 31" fill="none">
+            <path d="M33.4142 16.9142C34.1953 16.1332 34.1953 14.8668 33.4142 14.0858L20.6863 1.35786C19.9052 0.576816 18.6389 0.576816 17.8579 1.35786C17.0768 2.13891 17.0768 3.40524 17.8579 4.18629L29.1716 15.5L17.8579 26.8137C17.0768 27.5948 17.0768 28.8611 17.8579 29.6421C18.6389 30.4232 19.9052 30.4232 20.6863 29.6421L33.4142 16.9142ZM0 17.5H32V13.5H0V17.5Z" fill="black"/>
+            </svg>
+             
+    </a>
+
+   </div>
+   <div class="news">
+    <p class="employees">5K</p>
+    <P class="Details">we're proud to anounce that we 
+    now employ a workforce of over <strong>5,OOO</strong> it's all possible because of you.</P>
+   
+   </div>
+
+
+    </div>
+
+
+
+    <div class="right-col">
+
+<div class="card card1">
+    <div class="card-details">
+        <div>
+            <a href="#" class="product-title">jersy hijab </a>
+            <p>KHAMAR</p>
+        </div>
+        <p class="product-price">$49</p>
+    </div>
+</div>
+
+<div class="card card2">
+    <div class="card-details">
+        <div>
+            <a href="#" class="product-title">Fauxica Sport</a>
+            <p>CABAYA</p>
+        </div>
+        <p class="product-price">$49</p>
+    </div>
+</div>
+
+<div class="card card3">
+    <div class="card-details">
+        <div>
+            <a href="#" class="product-title">Jalbiib</a>
+            <p>EMAR</p>
+        </div>
+        <p class="product-price">$49</p>
+    </div>
+</div>
+
+
+
+    </div>
+
+
+
+</main>
+    </div>
+
+
+
+    
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+    
+                <a href="https://en-gb.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>  
+                
+            </div>
+            <div class="footerNav">
+          <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+          </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+        <p>Copyright &copy;2023 Desined by <span class="designer">Awil</span></p>
+    </div>
+    </footer>
+    
+</body>
+</html>
